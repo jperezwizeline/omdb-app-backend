@@ -1,6 +1,8 @@
 steps:
-- name: 'docker/compose:1.19.0'
+- name: 'docker/compose:1.24.0'
   args: ['build']
+  env:
+  - 'NODE_ENV=development'
 - name: 'gcr.io/cloud-builders/docker'
   args: ['tag', 'workspace_movies-service:latest', 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA']
 images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA']
