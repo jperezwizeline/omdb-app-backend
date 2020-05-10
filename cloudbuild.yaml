@@ -1,7 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args:
-  - ['network', 'create', 'gcloud_example_pipeline']
+  args: ['network', 'create', 'gcloud_example_pipeline']
 - name: 'docker/compose:1.24.0'
   args: ['up','-d']
   env:
