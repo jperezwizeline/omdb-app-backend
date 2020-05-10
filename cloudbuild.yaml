@@ -1,6 +1,6 @@
 steps:
 - name: 'docker/compose:1.24.0'
-  args: ['build']
+  args: ['up','-d']
   env:
   - 'NODE_ENV=development'
 - name: 'gcr.io/cloud-builders/docker'
